@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <title>Crear Usuario</title>
+</head>
+<body> 
+    <div class="h-screen flex justify-center items-center">
+        <div class="w-96 min-h-[450px] bg-gray-900 text-white p-6 rounded-lg shadow-lg">
+            <h1 class="text-3xl font-bold mb-4 text-center">Crear Nuevo Usuario</h1>     
+            <form action="/users/store" method="POST">
+                <label for="name" class="block text-sm font-medium mb-2">Nombre:</label>
+                <input type="text" id="name" name="name"
+                class="w-full p-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                
+                <label for="email" class="block text-sm font-medium mt-4 mb-2">Correo Electrónico:</label>
+                <input type="email" id="email" name="email"
+                class="w-full p-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                
+                <label for="password" class="block text-sm font-medium mt-4 mb-2">Contraseña:</label>
+                <input type="password" id="password" name="password"
+                class="w-full p-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                
+                <button type="submit" class="w-full bg-black text-white mt-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Crear Usuario
+                </button>
+            </form>
+        </div>
+    </div>
+</body> 
+</html>

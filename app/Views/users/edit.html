@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+
+    <script>
+        function redirigir() {
+            setTimeout(function() {
+                window.location.href = "/users";
+            }, 500); 
+        }
+        </script>
+</head>
+<body>
+    <div class="h-screen flex justify-center items-center">
+        <div class="w-96 min-h-[400px] bg-gray-900 text-white p-6 rounded-lg shadow-lg">        
+            <h1 class="text-3xl font-bold mb-4 text-center">Editar Usuario</h1>
+            <form action="/users/update/<?= $user['id']; ?>" method="post">
+                <label class="block text-sm font-medium mb-2" for="name">Nombre:</label>
+                <input class="w-full p-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" id="name" name="name" value="<?= esc($user['name']); ?>" required><br><br>
+        
+                <label class="block text-sm font-medium mt-4 mb-2" for="email">Correo Electrónico:</label>
+                <input class="w-full p-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" type="email" id="email" name="email" value="<?= esc($user['email']); ?>" required><br><br>
+        
+                <label class="block text-sm font-medium mt-4 mb-2" for="password">Contraseña:</label>
+                <input class="w-full p-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" type="password" id="password" name="password" required><br><br>
+        
+                <button class="w-full bg-black text-white mt-6 py-2 rounded-lg hover:bg-blue-700 transition type="submit" onclick="reidirigir()" >Actualizar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
