@@ -6,8 +6,7 @@ use App\Controllers\Users;
 /**
  * @var RouteCollection $routes
  */
-// $routes->get('/', 'Home::index');
-$routes->get('/users', "UserController::index");
+$routes->get('/', "UserController::index");
 $routes->get('/users/create', "UserController::create");
 $routes->post('/users/store', 'UserController::store');
 $routes->get('/users/edit/(:num)', 'UserController::edit/$1');
