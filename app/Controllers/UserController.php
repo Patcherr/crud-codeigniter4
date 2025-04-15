@@ -29,6 +29,8 @@ class UserController extends BaseController
             'name' => $this->request->getPost('name'),
             'email' => $this->request->getPost('email'),
             'password' => $this->request->getPost('password'),
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
         ];
 
         // Insert data into the database

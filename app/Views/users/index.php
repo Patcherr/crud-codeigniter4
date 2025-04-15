@@ -6,8 +6,7 @@
     <title>Lista de Usuarios</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-
+<body class="bg-gray-100">  
     <h1 class="text-4xl font-bold text-black text-center">Lista de Usuarios</h1>
     
     <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
