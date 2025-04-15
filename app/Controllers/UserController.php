@@ -28,7 +28,7 @@ class UserController extends BaseController
         $data = [
             'name' => $this->request->getPost('name'),
             'email' => $this->request->getPost('email'),
-            'password' => $this->request->getPost('password'),
+            'password' =>password_hash($this->request->getPost('password'), PASSWORD_BCRYPT), 
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ];
@@ -59,7 +59,7 @@ class UserController extends BaseController
         $model->update($id, [
             'name' => $this->request->getPost('name'),
             'email' => $this->request->getPost('email'),
-            'password' => $this->request->getPost('password'),
+            'password' =>password_hash($this->request->getPost('password'), PASSWORD_BCRYPT), 
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         return redirect()->to('/');
