@@ -33,7 +33,7 @@ class UserController extends BaseController
 
         // Insert data into the database
         if ($model->insert($data)) {
-            return redirect()->to('/users')->with('success', 'Successfully created user.');
+            return redirect()->to('/')->with('success', 'Successfully created user.');
         } else {
             return redirect()->back()->with('error', 'Error creating a user.');
         }
@@ -60,13 +60,13 @@ class UserController extends BaseController
             'password' => $this->request->getPost('password'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
-        return redirect()->to('/users');
+        return redirect()->to('/');
     }
 
     public function delete($id)
     {
         $model = new UserModel();
         $model->delete($id);
-        return redirect()->to('/users');
+        return redirect()->to('/');
     }
 }
